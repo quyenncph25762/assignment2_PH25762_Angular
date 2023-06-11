@@ -1,0 +1,47 @@
+<!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+<section class="bg-gray-100">
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="lg:grid-cols-5">
+            <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+                <form [formGroup]="productForm" (ngSubmit)="onSubmitForm()" action="" class="space-y-4">
+                    <div>
+                        <label class="sr-only" for="productName">Product Name</label>
+                        <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Product Name"
+                            type="text" id="name" formControlName="productName" />
+                    </div>
+
+                    <div>
+                        <label class="sr-only" for="Price">Price</label>
+                        <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Price" type="text"
+                            id="price" formControlName="price" />
+                    </div>
+                    <div>
+                        <label class="sr-only" for="imgUrl">imgUrl</label>
+                        <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="imgUrl" type="text"
+                            id="imgUrl" formControlName="imgUrl" />
+                    </div>
+
+                    <div>
+                        <label class="sr-only" for="message">Message</label>
+
+                        <textarea class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Message" rows="8"
+                            id="message" formControlName="description"></textarea>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" [disabled]="!productForm.valid"
+                            class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto">
+                            Send Enquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

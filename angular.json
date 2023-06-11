@@ -30,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/flowbite/dist/flowbite.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/flowbite/dist/flowbite.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "61bc9019-63ae-42a7-848e-d7ffac492b27"
   }
 }
